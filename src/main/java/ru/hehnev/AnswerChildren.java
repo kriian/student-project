@@ -1,6 +1,6 @@
 package ru.hehnev;
 
-public class AnswerCityRegister {
+public class AnswerChildren {
     private boolean success;
 
     public boolean isSuccess() {
