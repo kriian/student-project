@@ -1,8 +1,12 @@
-package ru.hehnev;
+package ru.hehnev.studentorder.validator;
+
+import ru.hehnev.studentorder.domain.AnswerCityRegister;
+import ru.hehnev.studentorder.domain.StudentOrder;
 
 public class CityRegisterValidator {
 
     private String hostName;
+    private String port;
     private String login;
     private String password;
 
