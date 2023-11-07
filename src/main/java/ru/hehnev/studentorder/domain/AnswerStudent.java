@@ -1,4 +1,4 @@
-package ru.hehnev;
+package ru.hehnev.studentorder.domain;
 
 public class AnswerStudent {
     private boolean success;
