@@ -9,6 +9,17 @@ public class Person {
     private LocalDate dateOfBirth;
     private Address address;
 
+    public Person() {
+    }
+
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth, Address address) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+    }
+
     public String getSurName() {
         return surName;
     }
