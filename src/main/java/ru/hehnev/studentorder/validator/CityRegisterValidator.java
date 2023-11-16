@@ -1,7 +1,9 @@
 package ru.hehnev.studentorder.validator;
 
 import ru.hehnev.studentorder.domain.AnswerCityRegister;
+import ru.hehnev.studentorder.domain.CityRegisterCheckerResponse;
 import ru.hehnev.studentorder.domain.StudentOrder;
+import ru.hehnev.studentorder.exception.CityRegisterException;
 
 public class CityRegisterValidator {
 
@@ -9,9 +11,21 @@ public class CityRegisterValidator {
     private String port;
     private String login;
     private String password;
+    private CityRegisterChecker personChecker;
+
+    public CityRegisterValidator() {
+        personChecker = new FakeCityRegisterChecker();
+    }
 
     public AnswerCityRegister checkCityRegister(StudentOrder studentOrder) {
-        System.out.println("City register is running: " + hostName + ", " + login + ", " + password);
+        try {
+            CityRegisterCheckerResponse hans = personChecker.checkPerson(studentOrder.getHusband());
+            CityRegisterCheckerResponse wans = personChecker.checkPerson(studentOrder.getWife());
+            CityRegisterCheckerResponse cans = personChecker.checkPerson(studentOrder.getChild());
+        } catch (CityRegisterException e) {
+            throw new RuntimeException(e);
+        }
+
         AnswerCityRegister answerCityRegister = new AnswerCityRegister();
         return answerCityRegister;
     }

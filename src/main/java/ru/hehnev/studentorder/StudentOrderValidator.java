@@ -29,7 +29,7 @@ public class StudentOrderValidator {
     }
 
     public StudentOrder[] readStudentOrders() {
-        StudentOrder[] studentOrders = new StudentOrder[3];
+        StudentOrder[] studentOrders = new StudentOrder[5];
         for (int i = 0; i < studentOrders.length; i++) {
             studentOrders[i] = SaveStudentOrder.buildStudentOrder(i);
         }
@@ -38,10 +38,10 @@ public class StudentOrderValidator {
 
     public void checkOneOrder(StudentOrder studentOrder) {
         AnswerCityRegister answerCityRegister = checkCityRegister(studentOrder);
-        AnswerWedding answerWedding = checkWedding(studentOrder);
-        AnswerChildren answerChildren = checkChildren(studentOrder);
-        AnswerStudent answerStudent = checkStudent(studentOrder);
-        sendMail(studentOrder);
+//        AnswerWedding answerWedding = checkWedding(studentOrder);
+//        AnswerChildren answerChildren = checkChildren(studentOrder);
+//        AnswerStudent answerStudent = checkStudent(studentOrder);
+//        sendMail(studentOrder);
     }
 
     public void checkAll() {

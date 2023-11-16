@@ -5,16 +5,16 @@ import java.time.LocalDate;
 public class Adult extends Person{
     private String passportSeria;
     private String passportNumber;
-    private LocalDate issuedDate;
-    private String issuedDepartment;
+    private LocalDate issueDate;
+    private String issueDepartment;
     private String university;
     private String studentId;
 
     public Adult() {
     }
 
-    public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth, Address address) {
-        super(surName, givenName, patronymic, dateOfBirth, address);
+    public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        super(surName, givenName, patronymic, dateOfBirth);
     }
 
     public String getPassportSeria() {
@@ -33,20 +33,20 @@ public class Adult extends Person{
         this.passportNumber = passportNumber;
     }
 
-    public LocalDate getIssuedDate() {
-        return issuedDate;
+    public LocalDate getIssueDate() {
+        return issueDate;
     }
 
-    public void setIssuedDate(LocalDate issuedDate) {
-        this.issuedDate = issuedDate;
+    public void setIssueDate(LocalDate issueDate) {
+        this.issueDate = issueDate;
     }
 
-    public String getIssuedDepartment() {
-        return issuedDepartment;
+    public String getIssueDepartment() {
+        return issueDepartment;
     }
 
-    public void setIssuedDepartment(String issuedDepartment) {
-        this.issuedDepartment = issuedDepartment;
+    public void setIssueDepartment(String issueDepartment) {
+        this.issueDepartment = issueDepartment;
     }
 
     public String getUniversity() {

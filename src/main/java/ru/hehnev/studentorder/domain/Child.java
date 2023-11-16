@@ -10,8 +10,8 @@ public class Child extends Person {
     public Child() {
     }
 
-    public Child(String surName, String givenName, String patronymic, LocalDate dateOfBirth, Address address) {
-        super(surName, givenName, patronymic, dateOfBirth, address);
+    public Child(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        super(surName, givenName, patronymic, dateOfBirth);
     }
 
     public String getCertificateNumber() {

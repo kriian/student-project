@@ -12,12 +12,11 @@ public class Person {
     public Person() {
     }
 
-    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth, Address address) {
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         this.surName = surName;
         this.givenName = givenName;
         this.patronymic = patronymic;
         this.dateOfBirth = dateOfBirth;
-        this.address = address;
     }
 
     public String getSurName() {
