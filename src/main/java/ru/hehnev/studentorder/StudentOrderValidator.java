@@ -1,6 +1,10 @@
 package ru.hehnev.studentorder;
 
-import ru.hehnev.studentorder.domain.*;
+import ru.hehnev.studentorder.domain.StudentOrder;
+import ru.hehnev.studentorder.domain.children.AnswerChildren;
+import ru.hehnev.studentorder.domain.register.AnswerCityRegister;
+import ru.hehnev.studentorder.domain.student.AnswerStudent;
+import ru.hehnev.studentorder.domain.wedding.AnswerWedding;
 import ru.hehnev.studentorder.mail.MailSender;
 import ru.hehnev.studentorder.validator.ChildrenValidator;
 import ru.hehnev.studentorder.validator.CityRegisterValidator;
@@ -26,10 +30,11 @@ public class StudentOrderValidator {
     public static void main(String[] args) {
         StudentOrderValidator studentOrderValidator = new StudentOrderValidator();
         studentOrderValidator.checkAll();
+
     }
 
     public StudentOrder[] readStudentOrders() {
-        StudentOrder[] studentOrders = new StudentOrder[5];
+        StudentOrder[] studentOrders = new StudentOrder[3];
         for (int i = 0; i < studentOrders.length; i++) {
             studentOrders[i] = SaveStudentOrder.buildStudentOrder(i);
         }

@@ -1,6 +1,6 @@
 package ru.hehnev.studentorder.validator;
 
-import ru.hehnev.studentorder.domain.AnswerStudent;
+import ru.hehnev.studentorder.domain.student.AnswerStudent;
 import ru.hehnev.studentorder.domain.StudentOrder;
 
 public class StudentValidator {

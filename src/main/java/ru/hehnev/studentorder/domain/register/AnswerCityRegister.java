@@ -1,4 +1,4 @@
-package ru.hehnev.studentorder.domain;
+package ru.hehnev.studentorder.domain.register;
 
 public class AnswerCityRegister {
     private boolean success;

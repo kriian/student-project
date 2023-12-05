@@ -1,4 +1,4 @@
-package ru.hehnev.studentorder.domain;
+package ru.hehnev.studentorder.domain.wedding;
 
 public class AnswerWedding {
     private boolean success;

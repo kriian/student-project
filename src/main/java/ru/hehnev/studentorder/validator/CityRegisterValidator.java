@@ -1,16 +1,13 @@
 package ru.hehnev.studentorder.validator;
 
-import ru.hehnev.studentorder.domain.AnswerCityRegister;
-import ru.hehnev.studentorder.domain.CityRegisterCheckerResponse;
+import ru.hehnev.studentorder.domain.register.AnswerCityRegister;
+import ru.hehnev.studentorder.domain.register.CityRegisterCheckerResponse;
 import ru.hehnev.studentorder.domain.StudentOrder;
 import ru.hehnev.studentorder.exception.CityRegisterException;
+import ru.hehnev.studentorder.validator.register.CityRegisterChecker;
+import ru.hehnev.studentorder.validator.register.FakeCityRegisterChecker;
 
 public class CityRegisterValidator {
-
-    private String hostName;
-    private String port;
-    private String login;
-    private String password;
     private CityRegisterChecker personChecker;
 
     public CityRegisterValidator() {
@@ -23,7 +20,7 @@ public class CityRegisterValidator {
             CityRegisterCheckerResponse wans = personChecker.checkPerson(studentOrder.getWife());
             CityRegisterCheckerResponse cans = personChecker.checkPerson(studentOrder.getChild());
         } catch (CityRegisterException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         AnswerCityRegister answerCityRegister = new AnswerCityRegister();

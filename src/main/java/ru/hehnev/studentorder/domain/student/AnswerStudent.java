@@ -1,6 +1,6 @@
-package ru.hehnev.studentorder.domain;
+package ru.hehnev.studentorder.domain.student;
 
-public class AnswerChildren {
+public class AnswerStudent {
     private boolean success;
 
     public boolean isSuccess() {
